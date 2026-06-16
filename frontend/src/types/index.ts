@@ -5,3 +5,18 @@ export interface BrailleChar {
 }
 
 export type LearnMode = 'charToBraille' | 'brailleToChar' | 'dictation'
+
+export interface DailyProgress {
+  date: string
+  completed: number
+  correct: number
+}
+
+export interface LearningGoal {
+  dailyTarget: number
+  totalCompleted: number
+  totalCorrect: number
+  streakDays: number
+  lastActiveDate: string
+  dailyProgress: DailyProgress[]
+}
